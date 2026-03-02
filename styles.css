@@ -196,30 +196,10 @@ strong { font-weight: 700; }
   flex-shrink: 0;
 }
 
-.logo-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--black);
-  color: var(--yellow);
-  font-size: 9.5px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1.55;
-  width: 34px;
-  height: 46px;
-  user-select: none;
-  flex-shrink: 0;
-}
-
-.logo-text {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--black);
-  white-space: nowrap;
+.logo-img {
+  width: 120px;
+  height: auto;
+  display: block;
 }
 
 /* Nav links */
@@ -1068,8 +1048,8 @@ strong { font-weight: 700; }
   .page-hero    { padding: 128px 0 56px; }
   .contact-hero { padding: 128px 0 52px; }
 
-  /* Logo text hide on very small nav */
-  .logo-text { display: none; }
+  /* Scale logo down on mobile */
+  .logo-img { width: 100px; }
 }
 
 /* =====================
