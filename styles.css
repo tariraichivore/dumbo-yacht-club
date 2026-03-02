@@ -197,7 +197,7 @@ strong { font-weight: 700; }
 }
 
 .logo-img {
-  width: 120px;
+  width: 180px;
   height: auto;
   display: block;
 }
@@ -1049,7 +1049,7 @@ strong { font-weight: 700; }
   .contact-hero { padding: 128px 0 52px; }
 
   /* Scale logo down on mobile */
-  .logo-img { width: 100px; }
+  .logo-img { width: 140px; }
 }
 
 /* =====================
