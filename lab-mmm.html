@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vuori DTC Measurement Strategy Engine — a zero-cost Marketing Mix Modeling engine built in Python by Dumbo Yacht Club." />
+  <title>Vuori MMM Case Study — Dumbo Yacht Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="Dumbo Yacht Club — Home">
+        <img src="logo.png" alt="Dumbo Yacht Club" class="logo-img" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="lab.html">The Lab</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-primary nav-cta">Let's Talk</a>
+
+      <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <nav class="mobile-nav">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="lab.html">The Lab</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="mobile-cta">
+        <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== PROJECT HERO ===================== -->
+    <section class="lab-project-hero" aria-label="Project overview">
+      <div class="container">
+        <a href="lab.html" class="lab-back-link">← Back to The Lab</a>
+        <span class="section-label fade-in">Marketing Mix Modeling</span>
+        <h1 class="fade-in delay-1">Vuori DTC Measurement Strategy Engine</h1>
+        <div class="divider fade-in delay-2"></div>
+        <p class="lead fade-in delay-3">Marketing Mix Modeling via zero-cost Python regression</p>
+      </div>
+    </section>
+
+    <!-- ===================== CONTEXT ===================== -->
+    <section class="lab-context" aria-label="Project context">
+      <div class="container">
+        <div class="lab-context-grid fade-in">
+
+          <div class="lab-context-block">
+            <h3>Client Archetype</h3>
+            <p>High-growth DTC apparel brand. Vuori operates across Google Search, Meta Ads, and Programmatic Display — scaling fast, with increasing pressure to justify media investment beyond last-click attribution.</p>
+          </div>
+
+          <div class="lab-context-block">
+            <h3>Core Challenge</h3>
+            <p>Post-iOS&nbsp;14 signal loss rendered click-attribution unreliable. With 30–40% of conversions dark to pixel-based tools, Vuori needed a structural approach to media measurement that didn't depend on cookies or app-level events.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== METHODOLOGY ===================== -->
+    <section class="lab-methodology" aria-label="Methodology">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <span class="section-label">Approach</span>
+          <h2>Methodology</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="lab-steps">
+
+          <div class="lab-step fade-in">
+            <span class="lab-step-num">01</span>
+            <div class="lab-step-content">
+              <h3>Data Engineering</h3>
+              <p>Synthetic data generation — 104 weeks of omni-channel spend with built-in diminishing returns and macro noise. Weekly revenue, channel spend, and external variables (seasonality index, macro index) were modeled to reflect real-world media dynamics at scale.</p>
+            </div>
+          </div>
+
+          <div class="lab-step fade-in delay-1">
+            <span class="lab-step-num">02</span>
+            <div class="lab-step-content">
+              <h3>Attribution Modeling</h3>
+              <p>Log-log feature transformation, elasticity extraction, and marginal ROAS layer via Python regression engine. By transforming spend and revenue into log space, the model captures diminishing returns as a structural property — not a tuning parameter — and surfaces channel-level elasticities that hold under budget shifts.</p>
+            </div>
+          </div>
+
+          <div class="lab-step fade-in delay-2">
+            <span class="lab-step-num">03</span>
+            <div class="lab-step-content">
+              <h3>Executive Automation</h3>
+              <p>Media saturation curves isolating diminishing returns — automated performance allocation matrix with mROAS triggers. Output is a decision-ready table: each channel's elasticity, average weekly spend, marginal ROAS at current investment, and a plain-language strategic action derived from threshold logic.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXECUTIVE MATRIX ===================== -->
+    <section class="lab-matrix" aria-label="Executive performance matrix">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <span class="section-label">Output</span>
+          <h2>Executive Performance Matrix</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="matrix-table-wrap fade-in delay-1">
+          <table class="matrix-table" aria-label="Channel performance matrix">
+            <thead>
+              <tr>
+                <th scope="col">Channel</th>
+                <th scope="col">Elasticity</th>
+                <th scope="col">Avg Weekly Spend</th>
+                <th scope="col">mROAS</th>
+                <th scope="col">Strategic Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Google Search</td>
+                <td>0.0375</td>
+                <td>$38,657</td>
+                <td>$3.44</td>
+                <td><span class="matrix-badge badge-scale">Aggressive Scale</span></td>
+              </tr>
+              <tr>
+                <td>Meta Ads</td>
+                <td>0.0378</td>
+                <td>$59,688</td>
+                <td>$2.24</td>
+                <td><span class="matrix-badge badge-maintain">Maintain &amp; Optimize</span></td>
+              </tr>
+              <tr>
+                <td>Programmatic</td>
+                <td>0.0044</td>
+                <td>$12,857</td>
+                <td>$1.20</td>
+                <td><span class="matrix-badge badge-warning">Saturation Warning</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== KEY INSIGHT ===================== -->
+    <section class="lab-insight" aria-label="Key insight">
+      <div class="container">
+        <div class="lab-insight-inner fade-in">
+          <h2>Key Insight</h2>
+          <blockquote>
+            <p>Google Search is significantly under-funded relative to its marginal return ($3.44 mROAS vs. a $3.00 scale threshold). Meta Ads is performing efficiently at current investment levels. Programmatic display has crossed into saturation — each additional dollar is returning $1.20, suggesting budget should be capped and reallocated toward Search to maximize incremental revenue.</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="lab-cta-section" aria-label="View the notebook">
+      <div class="container">
+        <div class="fade-in">
+          <span class="section-label">Open Source</span>
+          <h2>Explore the Full Model</h2>
+          <p>The complete Python implementation — data generation, log-log regression, elasticity extraction, and the allocation matrix — is available in Google Colab.</p>
+          <a
+            href="https://colab.research.google.com/drive/1c3afOsxc_ZZeH0dO3ZEGYcZSPVNBxTNg?usp=sharing"
+            class="btn btn-primary btn-lab-colab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >View Google Colab Notebook</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">Dumbo Yacht Club</p>
+      <p class="footer-email">
+        <a href="mailto:tchivore@dumboyachtclub.com">tchivore@dumboyachtclub.com</a>
+      </p>
+      <p class="footer-copy">&copy; 2025 Dumbo Yacht Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
