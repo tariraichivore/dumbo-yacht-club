@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="US Market Social Reporting Pipeline: an automated ETL pipeline for multi-channel social media reporting by Dumbo Yacht Club." />
+  <title>US Market Social Reporting Pipeline | Dumbo Yacht Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="Dumbo Yacht Club — Home">
+        <img src="logo.png" alt="Dumbo Yacht Club" class="logo-img" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="lab.html">The Lab</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-primary nav-cta">Let's Talk</a>
+
+      <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <nav class="mobile-nav">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="lab.html">The Lab</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="mobile-cta">
+        <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== PROJECT HERO ===================== -->
+    <section class="lab-project-hero" aria-label="Project overview">
+      <div class="container">
+        <a href="lab.html" class="lab-back-link">&#8592; Back to The Lab</a>
+        <span class="section-label fade-in">Social Media Analytics</span>
+        <h1 class="fade-in delay-1">US Market Social Reporting Pipeline</h1>
+        <div class="divider fade-in delay-2"></div>
+        <p class="lead fade-in delay-3">Automated ETL pipeline for multi-channel social media reporting via zero-cost Python processing</p>
+      </div>
+    </section>
+
+    <!-- ===================== HERO IMAGE PLACEHOLDER ===================== -->
+    <div class="lab-hero-placeholder" aria-hidden="true"></div>
+
+    <!-- ===================== CONTEXT ===================== -->
+    <section class="lab-context" aria-label="Project context">
+      <div class="container">
+        <div class="lab-context-grid fade-in">
+
+          <div class="lab-context-block">
+            <h3>Client Archetype</h3>
+            <p>Global entertainment brand managing a high-velocity social content operation across TikTok, Instagram, and Facebook. The brand publishes dozens of posts per month across all three channels and requires consistent, accurate monthly performance reporting to inform content strategy and demonstrate value to internal stakeholders.</p>
+          </div>
+
+          <div class="lab-context-block">
+            <h3>Core Challenge</h3>
+            <p>Across the agency landscape, tightening client budgets and hourly-based fee structures are applying increasing pressure on analytics and reporting scopes. Reporting is often the first line item to get compressed, yet it remains one of the most labor-intensive deliverables an agency produces each month. The challenge is compounded by the nature of social data itself. Multi-channel reporting is deceptively complex, not because the datasets are large or the math is advanced, but because the data is fragmented. Different platforms export data in different formats, with different schema conventions, different null representations, and different URL structures for the same post. Reconciling all of that into a single clean dataset requires significant analyst time every single month.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== METHODOLOGY ===================== -->
+    <section class="lab-methodology" aria-label="Methodology">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <span class="section-label">Approach</span>
+          <h2>Methodology</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="lab-steps">
+
+          <div class="lab-step fade-in">
+            <span class="lab-step-num">01</span>
+            <div class="lab-step-content">
+              <h3>Prompt Library (v1)</h3>
+              <p>DYC developed a structured prompt library in Notion to systematize the ETL process across three phases: Clean, Aggregate, and Analyze. Each prompt encoded a specific transformation rule, filtering by network, removing promoted posts, standardizing decimal formats, and computing engagement metrics. This reduced the monthly reporting cycle from 2 to 3 days to under a day, and served as the foundation for a more scalable architecture.</p>
+            </div>
+          </div>
+
+          <div class="lab-step fade-in delay-1">
+            <span class="lab-step-num">02</span>
+            <div class="lab-step-content">
+              <h3>AI-Assisted Pipeline Design (v2)</h3>
+              <p>The prompt library was used as a specification document. Each prompt was audited to determine whether it required genuine AI judgment or was simply a deterministic transformation. Filtering rows, replacing null placeholders, computing IQR-filtered medians, joining files on normalized post text: none of these require intelligence. They require code. This audit became the blueprint for v3.</p>
+            </div>
+          </div>
+
+          <div class="lab-step fade-in delay-2">
+            <span class="lab-step-num">03</span>
+            <div class="lab-step-content">
+              <h3>Proprietary ETL Pipeline (v3)</h3>
+              <p>DYC rebuilt the entire workflow as a locally-hosted web application: a FastAPI Python backend with a browser-based frontend. The pipeline ingests five source files across three channels, executes all cleaning, joining, and aggregation logic in Python/pandas, and produces three downloadable outputs in under 10 minutes. Zero LLM API calls are made during the monthly workflow. AI was used to design and maintain the infrastructure. Python handles the data.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PIPELINE ARCHITECTURE ===================== -->
+    <section class="lab-matrix" aria-label="Pipeline architecture">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <span class="section-label">Technical Architecture</span>
+          <h2>Pipeline Architecture</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="matrix-table-wrap fade-in delay-1">
+          <table class="matrix-table" aria-label="Pipeline architecture table">
+            <thead>
+              <tr>
+                <th scope="col">Phase</th>
+                <th scope="col">Input</th>
+                <th scope="col">Logic</th>
+                <th scope="col">Output</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Clean</td>
+                <td>5 source files (Brandwatch + manual)</td>
+                <td>Filter, deduplicate, join, normalize</td>
+                <td>Master Data Bank</td>
+              </tr>
+              <tr>
+                <td>Aggregate</td>
+                <td>Master Data Bank</td>
+                <td>Channel totals, IQR medians, benchmark comparison</td>
+                <td>Aggregates report</td>
+              </tr>
+              <tr>
+                <td>Analyze</td>
+                <td>Master Data Bank</td>
+                <td>Top/bottom performers vs. per-post benchmarks</td>
+                <td>Analysis report</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== RESULTS ===================== -->
+    <section class="lab-results" aria-label="Results">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <span class="section-label">Impact</span>
+          <h2>Results</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="lab-results-grid fade-in delay-1">
+
+          <div class="lab-result-item">
+            <p class="lab-result-text">2 to 3 days reduced to under 10 minutes for the full monthly ETL cycle.</p>
+          </div>
+
+          <div class="lab-result-item">
+            <p class="lab-result-text">Zero marginal token cost per monthly report run.</p>
+          </div>
+
+          <div class="lab-result-item">
+            <p class="lab-result-text">Full IP ownership. No dependency on third-party platforms, hosted services, or external accounts.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== KEY INSIGHT ===================== -->
+    <section class="lab-insight" aria-label="Key insight">
+      <div class="container">
+        <div class="lab-insight-inner fade-in">
+          <h2>Key Insight</h2>
+          <blockquote>
+            <p>AI manages the infrastructure build and maintenance. Python manages the data.</p>
+          </blockquote>
+          <p class="lab-insight-body">AI adoption needs to be intentional. The most important decision in this project was not which AI tools to use, but where not to use them. The v1 prompt library was a necessary step. It surfaced and systematized the institutional knowledge required to build something more durable. But using AI to run deterministic transformations every month is the wrong application of the technology. It introduces recurring costs, latency, and a dependency on external APIs for work that Python can do faster, cheaper, and more reliably.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPLORE THE PIPELINE ===================== -->
+    <section class="lab-cta-section" aria-label="Explore the pipeline">
+      <div class="container">
+        <div class="fade-in">
+          <span class="section-label">Web Application</span>
+          <h2>Explore the Pipeline</h2>
+          <p>Screenshots of the web application interface coming soon.</p>
+          <div class="lab-pipeline-placeholder" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">Dumbo Yacht Club</p>
+      <p class="footer-email">
+        <a href="mailto:tchivore@dumboyachtclub.com">tchivore@dumboyachtclub.com</a>
+      </p>
+      <p class="footer-copy">&copy; 2025 Dumbo Yacht Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
