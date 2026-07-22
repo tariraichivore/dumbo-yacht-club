@@ -1130,6 +1130,10 @@ strong { font-weight: 700; }
   overflow: hidden;
 }
 
+.lab-card-img.lab-card-img--dark {
+  background: #0A0A0A;
+}
+
 .lab-card-img img {
   width: 100%;
   height: 100%;
